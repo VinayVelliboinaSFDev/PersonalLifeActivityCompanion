@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Snacks__c</fullName>
+    <description>Records any snacks or small meals consumed between main meals during the day.</description>
+    <inlineHelpText>List any snacks consumed during the day, e.g., "Apple, handful of nuts, tea".</inlineHelpText>
+    <label>Snacks</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

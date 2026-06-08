@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Daily_Health_Records</fullName>
+    <filterScope>Everything</filterScope>
+    <label>All Daily Health Records</label>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Activity_Date__c</columns>
+    <columns>Weight_KG__c</columns>
+    <columns>Mood__c</columns>
+    <columns>Source__c</columns>
+</ListView>

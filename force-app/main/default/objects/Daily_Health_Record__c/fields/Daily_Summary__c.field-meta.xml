@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Summary__c</fullName>
+    <description>Rich text area to store the AI-generated daily health summary that consolidates all tracked activities and metrics for the day.</description>
+    <inlineHelpText>This field contains the AI-generated summary of all health activities and metrics recorded for the day.</inlineHelpText>
+    <label>Daily Summary</label>
+    <length>131072</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>20</visibleLines>
+</CustomField>

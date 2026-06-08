@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Date__c</fullName>
+    <description>The date for which this Daily Health Record applies. Only one record is allowed per Contact per date.</description>
+    <inlineHelpText>Enter the date this health record is for. Only one record per person per day is allowed.</inlineHelpText>
+    <label>Activity Date</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

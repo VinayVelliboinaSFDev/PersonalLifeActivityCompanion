@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daily_Notes__c</fullName>
+    <description>Free-form rich text field for the user to record any additional daily notes, observations, or journal entries.</description>
+    <inlineHelpText>Enter any additional notes about your day, health observations, or personal journal entries.</inlineHelpText>
+    <label>Daily Notes</label>
+    <length>131072</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>20</visibleLines>
+</CustomField>

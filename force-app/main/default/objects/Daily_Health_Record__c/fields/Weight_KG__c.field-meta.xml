@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weight_KG__c</fullName>
+    <description>Body weight measurement recorded for the day, stored in kilograms with two decimal places.</description>
+    <inlineHelpText>Enter your body weight in kilograms, e.g., 72.50. Record this at the same time each day for consistency.</inlineHelpText>
+    <label>Weight KG</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
