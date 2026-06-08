@@ -11,7 +11,8 @@
     <nameField>
         <label>Name</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
+        <displayFormat>DHR-{00000}</displayFormat>
     </nameField>
     <pluralLabel>Daily Health Records</pluralLabel>
     <searchLayouts>

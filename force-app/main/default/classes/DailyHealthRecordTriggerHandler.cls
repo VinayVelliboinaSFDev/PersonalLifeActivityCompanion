@@ -1,8 +1,6 @@
 /**
  * @description Handler class for the DailyHealthRecordTrigger.
- *              Enforces two business rules on Daily_Health_Record__c:
- *              1. Auto-populates the Name field on insert with Activity_Date__c formatted as YYYY_MM_DD.
- *              2. Prevents duplicate records: only one Daily Health Record is allowed per Contact per Activity Date.
+ *              Prevents duplicate records: only one Daily Health Record is allowed per Contact per Activity Date.
  *
  *              Bulkified: all SOQL is outside loops; operates on collections throughout.
  * @author      Life Activity Companion
@@ -20,17 +18,16 @@ public with sharing class DailyHealthRecordTriggerHandler {
     // ─────────────────────────────────────────────────────────────────────────
 
     /**
-     * @description Handles before-insert logic: sets the Name field and checks for duplicates.
+     * @description Handles before-insert logic: checks for duplicates.
      * @param newRecords The list of new Daily_Health_Record__c records being inserted.
      */
     public void onBeforeInsert(List<Daily_Health_Record__c> newRecords) {
-        setRecordNames(newRecords);
         checkDuplicates(newRecords, null);
     }
 
     /**
      * @description Handles before-update logic: checks for duplicates only when
-     *              Contact__c or Activity_Date__c has changed. Does NOT re-set the Name.
+     *              Contact__c or Activity_Date__c has changed.
      * @param newRecords The updated list of Daily_Health_Record__c records.
      * @param oldRecordMap Map of record Id to old record values.
      */
@@ -54,23 +51,6 @@ public with sharing class DailyHealthRecordTriggerHandler {
     // ─────────────────────────────────────────────────────────────────────────
     // Private Helpers
     // ─────────────────────────────────────────────────────────────────────────
-
-    /**
-     * @description Populates the Name field for each record using Activity_Date__c
-     *              formatted as YYYY_MM_DD (zero-padded month and day).
-     * @param records The list of records to populate Names on.
-     */
-    @TestVisible
-    private void setRecordNames(List<Daily_Health_Record__c> records) {
-        for (Daily_Health_Record__c record : records) {
-            if (record.Activity_Date__c != null) {
-                String year  = String.valueOf(record.Activity_Date__c.year());
-                String month = String.valueOf(record.Activity_Date__c.month()).leftPad(2, '0');
-                String day   = String.valueOf(record.Activity_Date__c.day()).leftPad(2, '0');
-                record.Name  = year + '_' + month + '_' + day;
-            }
-        }
-    }
 
     /**
      * @description Checks the incoming records against existing database records and
