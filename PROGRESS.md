@@ -2,7 +2,8 @@
 
 > **Project:** Life Activity Companion  
 > **Type:** Salesforce DX (SFDX) — Declarative + Apex  
-> **Purpose:** Voice-first daily health diary that tracks food, water, exercise, mood, and daily notes for a Contact — one record per person per day.
+> **Purpose:** Text-chat daily health diary that tracks food, water, exercise, mood, and daily notes for a Contact — one record per person per day.
+> **Current direction:** Continue with typed chat commands for AI app / custom MCP app interactions.
 
 ---
 
@@ -47,7 +48,7 @@ All files located under: `force-app/main/default/objects/Daily_Health_Record__c/
 | 10 | `Weight_KG__c` | `Weight_KG__c.field-meta.xml` | Number(5,2) | trackHistory = true |
 | 11 | `Mood__c` | `Mood__c.field-meta.xml` | MultiselectPicklist | 52 mood values; visibleLines=4; restricted=false; trackHistory=true |
 | 12 | `Daily_Notes__c` | `Daily_Notes__c.field-meta.xml` | Html / RichTextArea | length=131072; visibleLines=20; trackHistory=true |
-| 13 | `Source__c` | `Source__c.field-meta.xml` | Picklist | Values: Voice (default), Text; restricted=true |
+| 13 | `Source__c` | `Source__c.field-meta.xml` | Picklist | Tracks text/chat entry source going forward |
 | 14 | `Conversation_Summary__c` | `Conversation_Summary__c.field-meta.xml` | Html / RichTextArea | length=131072; visibleLines=20 |
 | 15 | `Daily_Summary__c` | `Daily_Summary__c.field-meta.xml` | Html / RichTextArea | length=131072; visibleLines=20 |
 
@@ -218,7 +219,7 @@ PersonalLifeActivityCompanion/
 | **Master-Detail** to Contact | Enforces ControlledByParent sharing; one record per person per day |
 | **MultiselectPicklist** for Mood | Allows users to capture multiple concurrent emotional states |
 | **Html/RichTextArea** for Notes fields | Supports rich formatting for AI-generated summaries |
-| **Source picklist** (Voice/Text) | Tracks how the record was created — voice input vs. manual entry |
+| **Text-chat command interface** | AI app / MCP interactions will use typed chat commands |
 | **FlexiPage skipped** | User requested to skip; standard page layout used instead |
 | **Bulkified handler pattern** | Trigger delegates to handler class; all logic is governor-limit safe |
 | **Within-batch duplicate detection** | Checks both in-memory (same DML batch) and database duplicates |
@@ -238,7 +239,7 @@ PersonalLifeActivityCompanion/
 1. **One record per Contact per day** — enforced by Apex trigger with clear error message
 2. **Auto-generated Name** — formatted as `YYYY_MM_DD` (e.g., `2024_01_15`)
 3. **Activity Date is required** — field-level required constraint
-4. **Source defaults to Voice** — picklist with Voice as default value
+4. **Text chat is the supported command channel** — typed commands drive custom MCP app usage
 5. **Field history tracking** — enabled on 10 key fields for audit trail
 6. **Sharing follows parent Contact** — ControlledByParent model
 

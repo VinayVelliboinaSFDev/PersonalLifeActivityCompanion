@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Mood__c</fullName>
-    <description>Multi-select picklist capturing the user's emotional and physical mood for the day.</description>
-    <inlineHelpText>Select one or more moods that best describe how you felt today.</inlineHelpText>
+    <description>Single-select picklist capturing the user's primary mood for the day.</description>
+    <inlineHelpText>Select the one mood that best describes how you felt overall today.</inlineHelpText>
     <label>Mood</label>
     <required>false</required>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>MultiselectPicklist</type>
+    <type>Picklist</type>
     <valueSet>
-        <restricted>false</restricted>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
@@ -18,68 +18,13 @@
                 <label>Happy</label>
             </value>
             <value>
-                <fullName>Very Happy</fullName>
-                <default>false</default>
-                <label>Very Happy</label>
-            </value>
-            <value>
-                <fullName>Excited</fullName>
-                <default>false</default>
-                <label>Excited</label>
-            </value>
-            <value>
-                <fullName>Energetic</fullName>
-                <default>false</default>
-                <label>Energetic</label>
-            </value>
-            <value>
-                <fullName>Motivated</fullName>
-                <default>false</default>
-                <label>Motivated</label>
-            </value>
-            <value>
-                <fullName>Confident</fullName>
-                <default>false</default>
-                <label>Confident</label>
-            </value>
-            <value>
                 <fullName>Calm</fullName>
                 <default>false</default>
                 <label>Calm</label>
             </value>
             <value>
-                <fullName>Relaxed</fullName>
-                <default>false</default>
-                <label>Relaxed</label>
-            </value>
-            <value>
-                <fullName>Peaceful</fullName>
-                <default>false</default>
-                <label>Peaceful</label>
-            </value>
-            <value>
-                <fullName>Content</fullName>
-                <default>false</default>
-                <label>Content</label>
-            </value>
-            <value>
-                <fullName>Good</fullName>
-                <default>false</default>
-                <label>Good</label>
-            </value>
-            <value>
-                <fullName>Normal</fullName>
-                <default>false</default>
-                <label>Normal</label>
-            </value>
-            <value>
-                <fullName>Okay</fullName>
-                <default>false</default>
-                <label>Okay</label>
-            </value>
-            <value>
                 <fullName>Neutral</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Neutral</label>
             </value>
             <value>
@@ -88,44 +33,9 @@
                 <label>Tired</label>
             </value>
             <value>
-                <fullName>Very Tired</fullName>
-                <default>false</default>
-                <label>Very Tired</label>
-            </value>
-            <value>
-                <fullName>Sleepy</fullName>
-                <default>false</default>
-                <label>Sleepy</label>
-            </value>
-            <value>
-                <fullName>Exhausted</fullName>
-                <default>false</default>
-                <label>Exhausted</label>
-            </value>
-            <value>
-                <fullName>Lazy</fullName>
-                <default>false</default>
-                <label>Lazy</label>
-            </value>
-            <value>
-                <fullName>Low Energy</fullName>
-                <default>false</default>
-                <label>Low Energy</label>
-            </value>
-            <value>
                 <fullName>Stressed</fullName>
                 <default>false</default>
                 <label>Stressed</label>
-            </value>
-            <value>
-                <fullName>Overwhelmed</fullName>
-                <default>false</default>
-                <label>Overwhelmed</label>
-            </value>
-            <value>
-                <fullName>Worried</fullName>
-                <default>false</default>
-                <label>Worried</label>
             </value>
             <value>
                 <fullName>Anxious</fullName>
@@ -133,49 +43,9 @@
                 <label>Anxious</label>
             </value>
             <value>
-                <fullName>Nervous</fullName>
-                <default>false</default>
-                <label>Nervous</label>
-            </value>
-            <value>
-                <fullName>Restless</fullName>
-                <default>false</default>
-                <label>Restless</label>
-            </value>
-            <value>
                 <fullName>Sad</fullName>
                 <default>false</default>
                 <label>Sad</label>
-            </value>
-            <value>
-                <fullName>Very Sad</fullName>
-                <default>false</default>
-                <label>Very Sad</label>
-            </value>
-            <value>
-                <fullName>Depressed</fullName>
-                <default>false</default>
-                <label>Depressed</label>
-            </value>
-            <value>
-                <fullName>Lonely</fullName>
-                <default>false</default>
-                <label>Lonely</label>
-            </value>
-            <value>
-                <fullName>Disappointed</fullName>
-                <default>false</default>
-                <label>Disappointed</label>
-            </value>
-            <value>
-                <fullName>Hopeless</fullName>
-                <default>false</default>
-                <label>Hopeless</label>
-            </value>
-            <value>
-                <fullName>Emotional</fullName>
-                <default>false</default>
-                <label>Emotional</label>
             </value>
             <value>
                 <fullName>Angry</fullName>
@@ -183,96 +53,10 @@
                 <label>Angry</label>
             </value>
             <value>
-                <fullName>Frustrated</fullName>
-                <default>false</default>
-                <label>Frustrated</label>
-            </value>
-            <value>
-                <fullName>Irritated</fullName>
-                <default>false</default>
-                <label>Irritated</label>
-            </value>
-            <value>
-                <fullName>Upset</fullName>
-                <default>false</default>
-                <label>Upset</label>
-            </value>
-            <value>
-                <fullName>Annoyed</fullName>
-                <default>false</default>
-                <label>Annoyed</label>
-            </value>
-            <value>
                 <fullName>Sick</fullName>
                 <default>false</default>
                 <label>Sick</label>
             </value>
-            <value>
-                <fullName>Unwell</fullName>
-                <default>false</default>
-                <label>Unwell</label>
-            </value>
-            <value>
-                <fullName>Feverish</fullName>
-                <default>false</default>
-                <label>Feverish</label>
-            </value>
-            <value>
-                <fullName>Weak</fullName>
-                <default>false</default>
-                <label>Weak</label>
-            </value>
-            <value>
-                <fullName>Body Pain</fullName>
-                <default>false</default>
-                <label>Body Pain</label>
-            </value>
-            <value>
-                <fullName>Headache</fullName>
-                <default>false</default>
-                <label>Headache</label>
-            </value>
-            <value>
-                <fullName>Grateful</fullName>
-                <default>false</default>
-                <label>Grateful</label>
-            </value>
-            <value>
-                <fullName>Blessed</fullName>
-                <default>false</default>
-                <label>Blessed</label>
-            </value>
-            <value>
-                <fullName>Loved</fullName>
-                <default>false</default>
-                <label>Loved</label>
-            </value>
-            <value>
-                <fullName>Hopeful</fullName>
-                <default>false</default>
-                <label>Hopeful</label>
-            </value>
-            <value>
-                <fullName>Confused</fullName>
-                <default>false</default>
-                <label>Confused</label>
-            </value>
-            <value>
-                <fullName>Distracted</fullName>
-                <default>false</default>
-                <label>Distracted</label>
-            </value>
-            <value>
-                <fullName>Bored</fullName>
-                <default>false</default>
-                <label>Bored</label>
-            </value>
-            <value>
-                <fullName>Unfocused</fullName>
-                <default>false</default>
-                <label>Unfocused</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
-    <visibleLines>4</visibleLines>
 </CustomField>
